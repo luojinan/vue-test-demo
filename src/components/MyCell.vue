@@ -1,10 +1,8 @@
 <template>
 <div class="cell-wrapper">
-  <div class="cell" @click="isShowContent=!isShowContent">标题</div>
-  <div class="cell-content" :class="isShowContent?'animate':''">
-    <p>展开内容</p>
-    <p>展开内容</p>
-    <p>展开内容</p>
+  <div class="cell" @click="handelCell">标题</div>
+  <div class="cell-content" :class="value?'animate':''">
+    <slot />
   </div>
 </div>
 </template>
@@ -13,11 +11,16 @@
 export default {
   name: "cell",
   props:{
-      isShowContent:{
-          type:Boolean,
-          default:false
+      value:{
+        type:Boolean,
+        default:false
       }
   },
+  methods:{
+    handelCell(){
+      this.$emit('input',!this.value)
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
