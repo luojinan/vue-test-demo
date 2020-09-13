@@ -29,6 +29,7 @@ export default {
     background-color: #fff;
     padding: 10px 20px;
     font-size: 16px;
+    border-bottom: 1px solid #eee;
   }
   .cell-content {
     padding: 0 20px;
