@@ -21,12 +21,20 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ "../views/dragePage/index.vue")
   // },
   {
-    path: "/",
+    path: "/lazyloadImg",
     name: "lazyloadImg",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ "../views/lazyloadImg/index.vue")
+  },
+  {
+    path: "/",
+    name: "asyncComponent",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ "../views/asyncComponent/index.vue")
   }
 ];
 
